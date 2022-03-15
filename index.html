@@ -148,7 +148,14 @@ I would put some stuff in here and repeat for projects 2 and 3, but I can't get 
             closeOnClick: false, // Closes side-nav on <a> clicks, useful for Angular/Meteor
             draggable: true // Choose whether you can drag to open on touch screens
         });
+            window.onload = () => {
+                'use strict';
 
+                if ('serviceWorker' in navigator) {
+                    navigator.serviceWorker
+                        .register('./sw.js');
+                }
+            }
     </script>
 </body>
 
