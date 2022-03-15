@@ -1,25 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <link rel="manifest" href="/magic.webmanifest">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-    <meta name="theme-color" content="white" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Magic 8 Ball">
-    <meta name="msapplication-TileImage" content="/img/ms144.png">
-    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <!-- JQuery / Materialize CSS + JavaScript imports -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <style>
+        #container {
+            padding-left: 300px;
+        }
+
+        #content {
+            padding: 20px;
+        }
+
+        @media only screen and (max-width : 992px) {
+            #container {
+                padding-left: 0px;
+            }
+        }
+    </style>
 
 </head>
 
 <body>
-    <form id="magic8ball">
-        <h1>Magic 8 Ball</h1>
-        <h2><i>The 8 Ball Knows</i></h2>
-        <p>Ask me anything I will answer.</p>
-        <input id="question" placeholder="enter a question" />
-        <button type="submit">Ask</button>
-        <p id="answer">If you had asked The answer would be here</p>
-    </form>
-    <script src="js/main.js" type="module"></script>
+    <div id="container">
+
+        <div id="menu">
+
+            <ul id="slide-out" class="side-nav fixed show-on-large-only">
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li class="no-padding">
+                    <ul class="collapsible collapsible-accordion">
+                        <li>
+                            <a class="collapsible-header">Projects<i class="material-icons">arrow_drop_down</i></a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li><a href="#projectone">Project 1</a></li>
+                                    <li><a href="#!">Project 2</a></li>
+                                    <li><a href="#!">Project 3</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div id="content">
+            <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only"><i
+                    class="material-icons">menu</i></a>
+
+            <h3>Dean Crossman's Resume</h3>
+
+            <p>Feel free to use the side nav bar to navigate through the resume easier, or resize the page to better fit your needs</p>
+<section id="education">
+<h1>Education</h1>
+<body>
+<h5>
+    Jacob Hespeler Secondary School
+</h5>
+    <b>Cambridge, ON</b><br />
+    <b>2015-2019</b><br /><br />
+   <ul>
+    <li>Achieved honour roll throughout highschool <br /> in grades 9, 10, 11, and 12 </li>
+    <br />
+    <li>Ontario Scholar</li>
+</ul>
+<br />
+<br />
+<h5>
+Wilfrid Laurier University
+</h5>
+    <b>Brantford, ON</b> <br /> 
+    <b>2019-2024</b> <br /> 
+    <br />
+    <ul>
+    <li>Currently enrolled in the User Experience (UX) <br />Design program </li>
+    <br />
+    <li>Achieved honour roll in 1st, 2nd, and am on <br />track for 3rd year</li>
+    <br />
+    <li>Currently taking extra courses in psychology and <br /> history</li>
+    </ul>
 </body>
+<br />
+<br />
+
+</section>
+<section id="experience">
+<h1>Experience</h1>
+<body>
+<h5> Preston Memorial Arena</h5>
+    <b>Cambridge, ON</b> <br />
+    <b>September 2021-Present</b> <br />
+    <br />
+    <ul>
+        <li>Maintained ice surface edges between ice rentals</li>
+        <br />
+        <li>Talked with the public to explain constant changing <br />protocols for COVID-19</li>
+        <br />
+        <li>Directed spectator traffic and assisted in filling out <br />screening forms fir teams visiting during tournaments</li>
+    </ul>
+    <br />
+    <br />
+<h5> Value Village - CDC Ambassador</h5>
+    <b>Cambridge, ON</b> <br />
+    <b>2018-2021</b> <br />
+    <br />
+    <ul>
+        <li>Received donations from customers and donors</li>
+        <br />
+        <li>Communicated with management as a senior employee <br />to help make the job easier for new staff</li>
+        <br />
+        <li>Worked as a team to help donors transition into donating <br />during the COVID-19 pandemic</li>
+    </ul>
+</body>
+</section>
+
+<section id="projectone">
+<h1>Project 1</h1>
+<body>
+I would put some stuff in here and repeat for projects 2 and 3, but I can't get it to work properly
+</body>
+</section>
+        </div>
+
+    </div>
+    <script>
+        $('.button-collapse').sideNav({
+            menuWidth: 300, // Default is 300
+            edge: 'left', // Choose the horizontal origin
+            closeOnClick: false, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+            draggable: true // Choose whether you can drag to open on touch screens
+        });
+
+    </script>
+</body>
+
+</html>
